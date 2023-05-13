@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/assignReview.css" />
+<h1><%=title%></h1>
+<div class="review-container">
+  <form action="/admin/reviewEmployee/<%=id%>" method="post">
+    <label for="name">employee Name</label>
+    <input
+      required
+      type="text"
+      id="name"
+      name="reviewer"
+      class="name"
+      placeholder="<%=employee.name%>"
+      value="<%=employee.email%>"
+      readonly
+    />
+    <label for="recipiant">Recipiant</label>
+    <select name="recipiant" id="recipiant">
+      <%for(rec of recipiants) {%>
+      <option value="<%=rec._id%>"><%=rec.email%></option>
+      <%}%>
+    </select>
+    <input type="submit" value="assignReview" />
+  </form>
+</div>

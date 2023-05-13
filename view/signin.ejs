@@ -1,0 +1,29 @@
+
+    <link rel="stylesheet" href="/css/signin.css"
+  <body>
+    <div class="container">
+      <form action="/create-session" method="post">
+        <label for="email">email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          class="email"
+          placeholder="email"
+          required
+        />
+        <label for="password">password</label>
+        <input
+          required
+          type="text"
+          id="password"
+          name="password"
+          class="password"
+          placeholder="password"
+        />
+        <input type="submit" value="Log-in" />
+        <p>Not an user?<a href="/signup">sign-up</a></p>
+      </form>
+    </div>
+  </body>
+

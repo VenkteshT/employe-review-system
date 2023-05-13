@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/signup.css" />
+
+<div class="container">
+  <form action="/create" method="post">
+    <label for="name">Name</label>
+    <input
+      required
+      type="text"
+      id="name"
+      name="name"
+      class="name"
+      placeholder="name"
+    />
+
+    <label for="email">Email</label>
+    <input
+      required
+      type="text"
+      id="email"
+      name="email"
+      class="email"
+      placeholder="email"
+    />
+    <label for="password">password</label>
+
+    <input
+      id="password"
+      type="text"
+      name="password"
+      class="password"
+      placeholder="password"
+      required
+    />
+    <label for="confirm_password">confirm password</label>
+    <input
+      required
+      id="confirm_password"
+      type="text"
+      name="confirm_password"
+      class="password"
+      placeholder="confirm passwrod"
+    />
+    <label for="role">role</label>
+    <select name="role" id="role">
+      <option value="user">User</option>
+      <option value="admin">Admin</option>
+    </select>
+    <input type="submit" value="Sign-up" />
+    <p>already user? <a href="/signin">sign-in</a></p>
+  </form>
+</div>

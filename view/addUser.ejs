@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/addUser.css" />
+<div class="container">
+  <form action="/admin/addUser" method="post">
+    <label for="name">Name</label>
+    <input
+      required
+      type="text"
+      id="name"
+      name="name"
+      class="name"
+      placeholder="name"
+    />
+
+    <label for="email">Email</label>
+    <input
+      required
+      type="text"
+      id="email"
+      name="email"
+      class="email"
+      placeholder="email"
+    />
+    <label for="password">password</label>
+
+    <input
+      id="password"
+      type="text"
+      name="password"
+      class="password"
+      placeholder="password"
+      required
+    />
+    <label for="confirm_password">confirm password</label>
+    <input
+      required
+      id="confirm_password"
+      type="text"
+      name="confirm_password"
+      class="password"
+      placeholder="confirm passwrod"
+    />
+    <input type="submit" value="Add-User" />
+  </form>
+</div>

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/review.css" />
+
+<% if(!assignedReviews.length) {%>
+<h2 style="text-align: center">No review Assigned to you</h2>
+<%} else {%>
+<h2><%=title%></h2>
+<%}%>
+<section class="assigned-reviews">
+  <% for (user of assignedReviews) {%>
+  <form action="/employee/postReview/<%=user._id%>" method="post" class="card">
+    <div class="card-header">
+      employee_name: &nbsp;
+      <h3><%=user.name%></h3>
+    </div>
+    <div class="card-body">
+      <textarea
+        name="review"
+        required
+        id=""
+        cols="36"
+        rows="6"
+        placeholder="type here..."
+      ></textarea>
+    </div>
+    <input type="submit" value="post" />
+  </form>
+  <%}%>
+</section>

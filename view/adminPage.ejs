@@ -1,0 +1,15 @@
+<h1 style="text-align: center"><%=title%></h1>
+
+<div
+  class="empployees"
+  style="
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    align-items: start;
+    justify-content: center;
+  "
+>
+  <% for(user of users) {%> <%-include("_card.ejs")-%> <%}%>
+</div>

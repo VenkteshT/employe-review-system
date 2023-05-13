@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/card.css" />
+
+<div class="card">
+  <div class="card-header" style="display: flex; gap: 10px">
+    <i class="fa fa-user"></i>
+    <h2 style="margin: 0px"><%=user.name%></h2>
+  </div>
+  <div class="card-body">
+    <span>email:&nbsp;<%=user.email%></span>
+    <span>role:&nbsp;<%=user.role%></span>
+    <div class="opts">
+      <div class="modify">
+        <a href="/admin/editUser/<%=user._id%>">
+          <i class="fa fa-edit">&nbsp;Edit</i>
+        </a>
+        <a href="/admin/deleteUser/<%=user._id%>">
+          <i class="fa fa-trash">&nbsp; Delete</i>
+        </a>
+      </div>
+      <div class="assign">
+        <a href="/admin/assignReviewPage/<%=user._id%>">
+          <i class="fa-regular fa-comment">&nbsp;Assign Review</i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

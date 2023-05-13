@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/emp.css" />
+
+<h1 style="text-align: center"><%=title%></h1>
+
+<div class="emp-dash-board">
+  <section class="emp-info">
+    <div class="avatar">
+      <i class="fa fa-user"></i>
+    </div>
+    <div class="info">
+      <p>
+        <label for="">Name:&nbsp;</label>
+        <%=employee.name%>
+      </p>
+      <p>
+        <label for="">Email:&nbsp;</label>
+        <%=employee.email%>
+      </p>
+      <p>
+        <label for="">Role:&nbsp;</label>
+        <%=employee.role%>
+      </p>
+    </div>
+  </section>
+
+  <section class="reviews-container">
+    <h2 style="margin: 0px">Reviews about you</h2>
+    <br />
+    <div class="reviews">
+      <%for(review of reviewFromOthers) {%>
+      <div class="review">
+        <p class="name">From &nbsp; <%=review.reviewer.name%></p>
+        <p class="content"><%=review.review%></p>
+      </div>
+      <%}%>
+    </div>
+  </section>
+</div>

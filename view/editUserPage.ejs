@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/editUser.css" />
+<div class="edit-user-container">
+  <form action="/admin/updateUser/<%=employee._id%>" method="post">
+    <label for="name">Name</label>
+    <input
+      required
+      type="text"
+      id="name"
+      name="name"
+      class="name"
+      placeholder="name"
+      value="<%=employee.name%>"
+    />
+
+    <label for="email">Email</label>
+    <input
+      required
+      type="text"
+      id="email"
+      name="email"
+      class="email"
+      placeholder="email"
+      value="<%=employee.email%>"
+    />
+    <label for="role">role</label>
+    <select name="role" id="role">
+      <option value="employee">employee</option>
+      <option value="admin">admin</option>
+    </select>
+    <input type="submit" value="update_User" />
+  </form>
+</div>
